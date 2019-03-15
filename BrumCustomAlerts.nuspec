@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>SieBRUM.FancyAlerts</id>
+    <version>1.1.0.6</version>
+    <title>FancyAlerts</title>
+    <authors>SieBRUM</authors>
+    <owners>SieBRUM</owners>
+    <license type="expression">MIT</license>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>This package contains fancy alerts for Windows Forms applications</description>
+    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <copyright>Copyright 2019</copyright>
+    <tags>SieBRUM Fancy Alerts Windows Forms</tags>
+  </metadata>
+  <files>
+    <file src="bin\Debug\BrumCustomAlerts.dll" target="lib"></file>
+  </files>
+</package>
