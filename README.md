@@ -1,9 +1,9 @@
 # Brum Fancy Notifications
 
-API to add basic but fancy noticiations to your Win Forms applications. 
+API to add basic but fancy notifications to your WinForms application. 
 
 ## Installation
-Add [this package](https://www.nuget.org/packages/SieBRUM.FancyAlert) to your Win Forms project.
+Add [this package](https://www.nuget.org/packages/SieBRUM.FancyAlert) to your WinForms project.
 
 ## Usage
 ### Example form
@@ -13,7 +13,7 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace TestOmgevingEnzo
+namespace ExampleNamespace
 {
     public partial class Form1 : Form
     {
@@ -24,7 +24,7 @@ namespace TestOmgevingEnzo
 
         private void button1_Click(object sender, EventArgs e)
         {
-            BrumAlertFactory.OpenAlert("This is a successmessage!", AlertType.Success, 5000, AlertLocation.TopLeft);
+            BrumAlertFactory.OpenAlert("This is a success notification!", AlertType.Success, 5000, AlertLocation.TopLeft);
         }
     }
 }
@@ -36,10 +36,10 @@ namespace TestOmgevingEnzo
 BrumAlertFactory.OpenAlert("This is a success notification!", AlertType.Success);
 
 // Default error notification with custom life time and pre-set location
-BrumAlertFactory.OpenAlert("Dit is een error bericht!", AlertType.Error, 5000, AlertLocation.BottomRight);
+BrumAlertFactory.OpenAlert("This is an error notification!", AlertType.Error, 5000, AlertLocation.BottomRight);
 
 // Info box with custom colors, but using the default info icon
-BrumAlertFactory.OpenAlert("This is an info notification!",Color.Yellow, Color.Black, AlertType.Info, 5000,.TopLeft);
+BrumAlertFactory.OpenAlert("This is an info notification!",Color.Yellow, Color.Black, AlertType.Info, 5000, AlertLocation.TopLeft);
 
 // Completely custom notification with default life time
 BrumAlertFactory.OpenAlert("My custom notification!", Color.WhiteSmoke, Color.Red, myImage, alertLocation: AlertLocation.BottomRight);
