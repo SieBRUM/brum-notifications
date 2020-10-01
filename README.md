@@ -3,7 +3,7 @@
 API to add basic but fancy notifications to your WinForms application. 
 
 ## Installation
-Add [this package](https://www.nuget.org/packages/SieBRUM.FancyAlert) to your WinForms project.
+Add [this package](https://www.nuget.org/packages/SieBRUM.FancyAlerts/) to your WinForms project.
 
 ## Usage
 ### Example form
@@ -15,14 +15,14 @@ using System.Windows.Forms;
 
 namespace ExampleNamespace
 {
-    public partial class Form1 : Form
+    public class MyForm : Form
     {
-        public Form1()
+        public MyForm()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void openAlertButton_Click(object sender, EventArgs e)
         {
             BrumAlertFactory.OpenAlert("This is a success notification!", AlertType.Success, 5000, AlertLocation.TopLeft);
         }
