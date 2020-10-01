@@ -11,6 +11,25 @@ namespace BrumCustomAlerts
         int interval = 0;
         AlertLocation alertLocation;
 
+        #region Adding TOPMOST without stealing focus
+        protected override bool ShowWithoutActivation
+        {
+            get { return true; }
+        }
+
+        private const int WS_EX_TOPMOST = 0x00000008;
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams createParams = base.CreateParams;
+                createParams.ExStyle |= WS_EX_TOPMOST;
+                createParams.ExStyle |= 0x80;
+                return createParams;
+            }
+        }
+        #endregion
+
         #region constructors
         public BrumAlert(string message, AlertType type, int delay, AlertLocation alertLocation)
         {
@@ -182,25 +201,6 @@ namespace BrumCustomAlerts
                 Close();
             }
         }
-
-        #region Adding TOPMOST without stealing focus
-        protected override bool ShowWithoutActivation
-        {
-            get { return true; }
-        }
-
-        private const int WS_EX_TOPMOST = 0x00000008;
-        protected override CreateParams CreateParams
-        {
-            get
-            {
-                CreateParams createParams = base.CreateParams;
-                createParams.ExStyle |= WS_EX_TOPMOST;
-                createParams.ExStyle |= 0x80;
-                return createParams;
-            }
-        }
-        #endregion
     }
 
     public class BrumAlertFactory
